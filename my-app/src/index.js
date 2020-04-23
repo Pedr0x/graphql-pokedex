@@ -1,8 +1,9 @@
-
-
+import { BrowserRouter } from 'react-router-dom'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
+import './index.css';
+import './pedr0x.css'
+
 import App from './components/App'
 // 1
 import { ApolloProvider } from 'react-apollo'
@@ -24,9 +25,11 @@ const client = new ApolloClient({
 
 // 4
 ReactDOM.render(
+	  <BrowserRouter>
   <ApolloProvider client={client}>
-    <App />
-  </ApolloProvider>,
+    <App /> 
+  </ApolloProvider>
+	  </BrowserRouter>,
   document.getElementById('root')
 )
 
